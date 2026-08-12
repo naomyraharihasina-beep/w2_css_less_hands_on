@@ -25,16 +25,22 @@
 // Here's the current CSS for Heritage Weavers' website.
 // Notice how the brand color #c0392b appears everywhere...
 
+@brand-color: #16a085;        // The main teal color
+@brand-color-dark: #138d75;   // Darker version for hovers
+@text-color: #2c3e50;         // Dark text color
+@light-gray: #e0e0e0;         // Light gray for backgrounds
+@white: #ffffff;              // Pure white
+
 .header {
-  background: #c0392b;
-  color: white;
+  background: @brand-color;
+  color: @white;
   padding: 1rem;
-  border-bottom: 3px solid #c0392b;
+  border-bottom: 3px solid @brand-color;
   margin-bottom: 0rem;
 }
 
 .logo {
-  color: white;
+  color: @white;
   font-weight: bold;
   font-size: 1.5rem;
 }
@@ -48,14 +54,14 @@
 }
 
 .nav-link:hover {
-  background: rgba(192, 57, 43, 0.1); // Same color, but with opacity!
-  color: #c0392b;
+  background: rgba(22, 160, 133, 0.1); // Same color, but with opacity!
+  color: @brand-color;
 }
 
 .nav-link.active {
-  background: #c0392b;
-  color: white;
-  box-shadow: 0 2px 8px rgba(192, 57, 43, 0.3); // Yet another variation
+  background: @brand-color;
+  color: @white;
+  box-shadow: 0 2px 8px rgba(22, 160, 133, 0.1); // Yet another variation
 }
 
 .btn {
@@ -70,66 +76,66 @@
 }
 
 .btn-primary {
-  background: #c0392b;
-  color: white;
+  background: @brand-color;
+  color: @white;
 }
 
 .btn-primary:hover {
-  background: #a93226; // Darker version of #c0392b
+  background: @brand-color-dark; // Darker version of #c0392b
 }
 
 .btn-outline {
   background: transparent;
-  border: 2px solid #c0392b;
-  color: #c0392b;
+  border: 2px solid @brand-color;
+  color: @brand-color;
 }
 
 .btn-outline:hover {
-  background: #c0392b;
-  color: white;
+  background: @brand-color;
+  color: @white;
 }
 
 .card {
-  background: white;
+  background: @white;
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  border-left: 4px solid #c0392b; // Brand accent
+  border-left: 4px solid @brand-color; // Brand accent
 }
 
 .card-title {
-  color: #c0392b;
+  color: @brand-color;
   margin: 0 0 1rem 0;
 }
 
 .link {
-  color: #c0392b;
+  color: @brand-color;
   text-decoration: none;
 }
 
 .link:hover {
-  color: #a93226; // Darker version again
+  color: @brand-color-dark; // Darker version again
   text-decoration: underline;
 }
 
 .alert-info {
-  background: rgba(192, 57, 43, 0.1);
-  border: 1px solid #c0392b;
-  color: #2c3e50;
+  background: rgba(22, 160, 133, 0.1);
+  border: 1px solid @brand-color;
+  color: @text-color;
   padding: 1rem;
   border-radius: 4px;
 }
 
 .progress-bar {
   height: 8px;
-  background: #e0e0e0;
+  background: @light-gray;
   border-radius: 4px;
   overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #c0392b, #a93226);
+  background: linear-gradient(90deg, @brand-color, @brand-color-dark);
   transition: width 0.3s ease;
 }
 
@@ -149,7 +155,7 @@
    5. Run `npm run compile:ex1` and open demo.html to see your changes
 
    Don't worry if this feels tedious - that's the point!
-   Count how many places you changed: _____ (write your answer here)
+   Count how many places you changed: __19__ (write your answer here)
 */
 
 /* ========================================
