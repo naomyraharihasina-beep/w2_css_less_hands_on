@@ -54,14 +54,14 @@
 }
 
 .nav-link:hover {
-  background: rgba(22, 160, 133, 0.1); // Same color, but with opacity!
+  background: darken(@brand-color, 10%); // Same color, but with opacity!
   color: @brand-color;
 }
 
 .nav-link.active {
   background: @brand-color;
   color: @white;
-  box-shadow: 0 2px 8px rgba(22, 160, 133, 0.1); // Yet another variation
+  box-shadow: 0 2px 8px lighten(@brand-color, 10%); // Yet another variation
 }
 
 .btn {
@@ -119,7 +119,7 @@
 }
 
 .alert-info {
-  background: rgba(22, 160, 133, 0.1);
+  background: fade(@brand-color, 50%);
   border: 1px solid @brand-color;
   color: @text-color;
   padding: 1rem;
