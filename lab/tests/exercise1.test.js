@@ -17,9 +17,9 @@ describe('TASK 1C: Define Variables', () => {
 });
 
 describe('TASK 1D: Use Variables', () => {
-  test('use @brand-color in ALL 12 places', () => {
+  test('use @brand-color in ALL 30 places', () => {
     const count = (lessContent.match(/@brand-color/g) || []).length;
-    expect(count).toBe(12);
+    expect(count).toBe(30);
   });
 
   test('use @brand-color-dark in 3 places', () => {
