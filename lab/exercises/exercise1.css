@@ -1,21 +1,3 @@
-/* ========================================
-   THE SITUATION: A Client's Website
-   ======================================== */
-/*
-   SCENARIO: You're building a website for "Heritage Weavers", a family-owned
-   rug-making business. They've been using a warm terracotta color (#c0392b)
-   throughout their site to represent their traditional craftsmanship.
-
-   But now they want to modernize their brand! The owner calls: "We love the
-   website, but can you change our signature color to this beautiful teal
-   (#16a085) to appeal to younger customers?"
-
-   Your job: Update ALL instances of the brand color throughout the stylesheet.
-   Sound simple? Let's see how many places you need to change...
-*/
-/* ========================================
-   THE CURRENT STYLESHEET (The Problem)
-   ======================================== */
 .header {
   background: #16a085;
   color: #ffffff;
@@ -86,7 +68,7 @@
   text-decoration: none;
 }
 .link:hover {
-  color: #138d75;
+  color: #107360;
   text-decoration: underline;
 }
 .alert-info {
@@ -111,12 +93,12 @@
    TASK 1A: THE MANUAL APPROACH (Feel the Pain!)
    ======================================== */
 /*
-   🎯 TASK: Update ALL instances of #c0392b to #16a085 (teal)
+   🎯 TASK: Update ALL instances of #c0392b to #e67e22 (orange)
 
    Instructions:
    1. Go through the CSS above and change EVERY instance of the terracotta
-      color (#c0392b) to the new teal color (#16a085)
-   2. Also change the darker version (#a93226) to a darker teal (#138d75)
+      color (#c0392b) to the new teal color (#e67e22)
+   2. Also change the darker version (#a93226) to a darker orange (#d35400)
    3. Update the rgba values too: rgba(192, 57, 43, 0.1) becomes rgba(22, 160, 133, 0.1)
    4. As you work, keep a count of how many places you had to change
    5. Run `npm run compile:ex1` and open demo.html to see your changes
@@ -146,9 +128,9 @@
    🎓 LEARNING TIME: What are Variables?
 
    Variables in LESS (and other preprocessors) store reusable values.
-   Instead of repeating #16a085 everywhere, you define it once:
+   Instead of repeating #e67e22 everywhere, you define it once:
 
-   @brand-color: #16a085;
+   @brand-color: #e67e22;
 
    Then use @brand-color everywhere instead of the hex code.
    When you need to change the color, you update it in ONE place!
@@ -167,7 +149,7 @@
    with your variables!
 
    For example, change:
-   .header { background: #16a085; }
+   .header { background: #e67e22; }
 
    To:
    .header { background: @brand-color; }
@@ -201,7 +183,7 @@
    for modern web development!
 */
 /* ========================================
-   WHAT YOU LEARNED
+   WHAT YOU LEARNED 
    ======================================== */
 /*
    ✅ THE PROBLEM: Hard-coded values scattered throughout CSS
@@ -216,7 +198,7 @@
       - LESS uses @ symbol, SCSS uses $ symbol
 
    ✅ LESS FEATURES YOU USED:
-      - Variables: @brand-color: #16a085;
+      - Variables: @brand-color: #e67e22;
       - Color functions: darken(), lighten(), fade()
       - Comments that compile away
 
