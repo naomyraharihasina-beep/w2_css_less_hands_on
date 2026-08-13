@@ -1,0 +1,21 @@
+@import "../exercise1.less";
+
+/* HEADER STYLES */
+.header { background: @brand-color; color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+.header-container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: bold; }
+.nav { display: flex; gap: 2rem; }
+.nav-link { color: white; padding: 0.5rem 1rem; border-radius: 8px; transition: background 0.2s; }
+.nav-link:hover { background: rgba(255,255,255,0.1); }
+.nav-link.active { background: rgba(255,255,255,0.2); }
+
+/* MAIN CONTENT STYLES */
+.main { min-height: calc(100vh - 200px); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+.hero { background: linear-gradient(135deg, @brand-color, darken(@brand-color, 20%)); color: white; padding: 4rem 0; text-align: center; }
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9; }
+
+/* PRODUCT GRID STYLES */
+.products-section { padding: 4rem 0; }
+.products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
